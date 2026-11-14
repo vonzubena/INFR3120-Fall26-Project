@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <!-- Responsive on phones -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap, Font Awesome, then our CSS-->
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/@fortawesome/fontawesome-free/css/all.min.css" />
+    <link rel="stylesheet" href="/content/app.css" />
+  </head>
+  <body>
+    <div class="container my-4">
+      <h1><i class="fa-solid fa-car"></i> <%= title %></h1>
+
+      <!-- Link to the Sell Your Car form -->
+      <a href="/list_car" class="btn btn-primary mb-4">Sell Your Car</a>
+
+      <h2>Cars for Sale</h2>
+
+      <!-- Grid row: cards sit side by side and wrap -->
+      <div class="row">
+        <!-- One card per car in listings (sent from routes/index.js) -->
+        <% listings.forEach(function(car) { %>
+          <!-- 3 cards per row on laptops, 1 on phones -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title"><%= car.year %> <%= car.make %> <%= car.model %></h5>
+                <h6 class="card-subtitle mb-2 text-success">$<%= car.price %></h6>
+                <!-- Details with Font Awesome icons -->
+                <ul class="list-unstyled mb-0">
+                  <li><i class="fa-solid fa-gauge"></i> <%= car.mileage %> km</li>
+                  <li><i class="fa-solid fa-location-dot"></i> <%= car.location %></li>
+                  <li><i class="fa-solid fa-star"></i> <%= car.condition %></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        <% }); %>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS, then our script -->
+    <script src="/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/script/app.js"></script>
+  </body>
+</html>

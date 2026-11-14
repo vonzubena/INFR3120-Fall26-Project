@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/@fortawesome/fontawesome-free/css/all.min.css" />
+    <link rel="stylesheet" href="/content/app.css" />
+  </head>
+  <body>
+    <div class="container my-4" style="max-width: 600px;">
+      <h1><i class="fa-solid fa-car"></i> <%= title %></h1>
+
+      <!-- method="POST" + action="/list_car" sends the form to router.post('/list_car') in routes/index.js.
+           Each input's name="..." becomes req.body.name in the route -->
+      <form method="POST" action="/list_car">
+        <div class="mb-3">
+          <label for="make" class="form-label">Make</label>
+          <input type="text" class="form-control" id="make" name="make" placeholder="Toyota" required>
+        </div>
+        <div class="mb-3">
+          <label for="model" class="form-label">Model</label>
+          <input type="text" class="form-control" id="model" name="model" placeholder="Corolla" required>
+        </div>
+        <div class="mb-3">
+          <label for="year" class="form-label">Year</label>
+          <input type="number" class="form-control" id="year" name="year" min="1980" max="2027" required>
+        </div>
+        <div class="mb-3">
+          <label for="mileage" class="form-label">Mileage (km)</label>
+          <input type="number" class="form-control" id="mileage" name="mileage" min="0" required>
+        </div>
+        <div class="mb-3">
+          <label for="price" class="form-label">Price ($)</label>
+          <input type="number" class="form-control" id="price" name="price" min="0" required>
+        </div>
+        <div class="mb-3">
+          <label for="condition" class="form-label">Condition</label>
+          <select class="form-select" id="condition" name="condition" required>
+            <option value="Excellent">Excellent</option>
+            <option value="Good">Good</option>
+            <option value="Fair">Fair</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="location" class="form-label">Location</label>
+          <input type="text" class="form-control" id="location" name="location" placeholder="Oshawa, ON" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Post Listing</button>
+        <a href="/" class="btn btn-secondary">Cancel</a>
+      </form>
+    </div>
+
+    <script src="/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/script/app.js"></script>
+  </body>
+</html>
