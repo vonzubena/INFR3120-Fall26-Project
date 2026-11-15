@@ -33,4 +33,25 @@ router.post('/list_car', function(req, res, next) {
   res.redirect('/');
 });
 
+/* GET home page. */
+router.get('/home', function(req, res, next) {
+  res.render('index', { title: 'Home' });
+});
+  
+/* GET About me page */
+router.get('/about', function(req, res, next) {
+    res.render('about', { title: 'About' });
+});
+
+/* GET Projects page */
+router.get('/product', function(req, res, next) {
+    res.render('product', { title: 'Products&Services' });
+});
+
+/* GET Contact page */
+router.get('/contact', function(req, res, next) {
+    res.render('contact', { title: 'Contact' });
+});
+module.exports = router;
+
 module.exports = router;                                     // ← existing, keep at the bottom

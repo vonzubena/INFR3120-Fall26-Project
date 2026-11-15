@@ -1,0 +1,70 @@
+<!-- Shared header and navigation -->
+<%- include('Partials/header.ejs') %>
+<%- include('Partials/main_nav.ejs') %>
+
+<!-- Main content of the contact page -->
+<main class="container py-5">
+    <section>
+        <h2>Contact Me</h2>
+
+        <p>
+            If you would like to get in touch with me, please complete
+            the form below.
+        </p>
+
+        <form action="mailto:jeffery.nnabuife@ontariotechu.net"
+              method="post"
+              enctype="text/plain"
+              name="form">
+
+            <!-- Name field -->
+            <div class="mb-3">
+                <label for="name">Name:</label>
+                <input type="text"
+                       class="form-control"
+                       id="name"
+                       name="name"
+                       placeholder="Enter your name"
+                       required>
+            </div>
+
+            <!-- Email field -->
+            <div class="mb-3">
+                <label for="email">Email:</label>
+                <input type="email"
+                       class="form-control"
+                       id="email"
+                       name="email"
+                       placeholder="Enter your email address"
+                       required>
+            </div>
+
+            <!-- Cell number field -->
+            <div class="mb-3">
+                <label for="phone">Cell Number:</label>
+                <input type="tel"
+                       class="form-control"
+                       id="phone"
+                       name="phone"
+                       placeholder="Enter your cell number"
+                       pattern="[0-9]{10}"
+                       required>
+            </div>
+
+            <!-- Comments field -->
+            <div class="mb-3">
+                <label for="comments">Comments:</label>
+                <textarea class="form-control"
+                          id="comments"
+                          name="comments"
+                          rows="6"></textarea>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary">Submit</button>
+
+        </form>
+    </section>
+</main>
+<!-- Shared footer -->
+<%- include('partials/footer.ejs') %>
