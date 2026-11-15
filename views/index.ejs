@@ -1,14 +1,7 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <!-- Responsive on phones -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap, Font Awesome, then our CSS-->
-    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/@fortawesome/fontawesome-free/css/all.min.css" />
-    <link rel="stylesheet" href="/content/app.css" />
-  </head>
+<!-- Shared header and navigation -->
+<%- include('partials/header.ejs') %>
+<%- include('partials/main_nav.ejs') %>
+
   <body>
     <div class="container my-4">
       <h1><i class="fa-solid fa-car"></i> <%= title %></h1>
@@ -46,3 +39,5 @@
     <script src="/script/app.js"></script>
   </body>
 </html>
+<!-- Shared footer -->
+<%- include('partials/footer.ejs') %>
