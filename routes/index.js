@@ -10,7 +10,7 @@ let listings = [
 
 /* GET home page. */                                        // ← your existing route
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Wheel Trader', listings: listings });  // ← CHANGE: add listings: listings
+  res.render('index', { title: 'JAC Trades', listings: listings });  // ← CHANGE: add listings: listings
 });
 
 // ADD: GET list_car page - shows the form
@@ -33,9 +33,12 @@ router.post('/list_car', function(req, res, next) {
   res.redirect('/');
 });
 
-/* GET home page. */
+/* GET home page and listings. */
 router.get('/home', function(req, res, next) {
-  res.render('index', { title: 'Home' });
+    res.render('index', {
+        title: 'JAC Trades',
+        listings: listings
+    });
 });
   
 /* GET About me page */
