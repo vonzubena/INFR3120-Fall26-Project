@@ -1,0 +1,75 @@
+
+<!-- Shared header and navigation -->
+<%- include('Partials/header.ejs') %>
+<%- include('Partials/main_nav.ejs') %>
+
+<div class="container my-4">
+
+  <h1><i class="fa-solid fa-car"></i> Our Products & Services</h1>
+
+  <p>
+    Welcome to JAC Trades! We make it easy for customers
+    to buy and sell vehicles through our online platform.
+  </p>
+
+  <h2>Our Products</h2>
+
+  <div class="row">
+
+    <div class="col-md-4 mb-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">Used Cars</h5>
+          <p class="card-text">
+            Browse used vehicles listed by sellers on Wheel Trader.
+          </p>
+          <a href="/" class="btn btn-primary">View Cars</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">Sell Your Car</h5>
+          <p class="card-text">
+            Create a listing to advertise your vehicle to potential buyers.
+          </p>
+          <a href="/list_car" class="btn btn-primary">Sell Now</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <h2>Our Services</h2>
+
+  <div class="row">
+    <div class="col-md-6 mb-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">Vehicle Listings</h5>
+          <p class="card-text">
+            View available cars and compare their prices,
+            mileage, location, and condition.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">Seller Advertising</h5>
+          <p class="card-text">
+            Advertise your car using our online listing form.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Shared footer -->
+<%- include('Partials/footer.ejs') %>
