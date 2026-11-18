@@ -4,12 +4,22 @@
 
   <body>
     <div class="container my-4">
-      <h1><i class="fa-solid fa-car"></i> <%= title %></h1>
+      <!-- JAC Trades logo -->
+<div class="text-center mb-4">
+  <img src="/images/jac-trades-logo.png"
+       alt="JAC Trades Logo"
+       width="350"
+       class="img-fluid">
+</div>
 
       <!-- Link to the Sell Your Car form -->
-      <a href="/list_car" class="btn btn-primary mb-4">Sell Your Car</a>
+<!-- Buttons for buying and selling cars -->
+<div class="mb-4">
+  <a href="/list_car" class="btn btn-primary">Sell Your Car</a>
+  <a href="/buy_car" class="btn btn-success">Buy Cars</a>
+</div>
 
-      <h2>Cars for Sale</h2>
+      <h2 id="cars-for-sale">Cars for Sale</h2>
 
       <!-- Grid row: cards sit side by side and wrap -->
       <div class="row">

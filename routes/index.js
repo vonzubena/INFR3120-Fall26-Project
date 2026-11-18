@@ -55,6 +55,27 @@ router.get('/product', function(req, res, next) {
 router.get('/contact', function(req, res, next) {
     res.render('contact', { title: 'Contact' });
 });
+
+/* GET Buy Car page */
+router.get('/buy_car', function(req, res) {
+    res.render('buy_car', { title: 'Buy a Car' });
+});
+
+/* POST Buy Car form */
+router.post('/buy_car', function(req, res) {
+    let buyer = {
+        car: req.body.car,
+        name: req.body.name,
+        email: req.body.email,
+        phone: req.body.phone,
+        message: req.body.message
+    };
+
+    console.log('New Buyer Inquiry:', buyer);
+
+    res.send('Thank you! Your car inquiry has been submitted.');
+});
+
 module.exports = router;
 
 module.exports = router;                                     // ← existing, keep at the bottom
