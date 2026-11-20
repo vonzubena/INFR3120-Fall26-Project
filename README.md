@@ -1,5 +1,8 @@
 # JAC Trades
 
+LIVE ON RENDER: https://jac-trades.onrender.com/
+GITHUB PORTFOLIO: https://github.com/vonzubena/INFR3120-Fall26-Project
+
 INFR3120 Web and Scripting Programming, Fall 2026, Group 7
 
 A used car marketplace. Sellers post a car with the "Sell Your Car" form, and the listings show as cards on the home page.
